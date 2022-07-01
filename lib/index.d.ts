@@ -1,5 +1,6 @@
 interface Mammoth {
     convertToHtml: (input: Input, options?: Options) => Promise<Result>;
+    convertToJSON: <T>(input: Input, options?: Options) => Promise<T>;
     extractRawText: (input: Input) => Promise<Result>;
     embedStyleMap: (input: Input, styleMap: string) => Promise<{toBuffer: () => Buffer}>;
     images: Images;
